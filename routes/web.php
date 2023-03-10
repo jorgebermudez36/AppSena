@@ -40,10 +40,12 @@ Route::get('/api/seccion/update', [App\Http\Controllers\SeccionController::class
 Route::delete('/api/seccion/delete', [App\Http\Controllers\SeccionController::class, 'delete'])->name('borrar');
 
 Route::post('/api/almacen/load', [App\Http\Controllers\AlmacenController::class, 'load'])->name('alimentar');
-/*Route::get('/api/almacen/update', [App\Http\Controllers\AlmacenController::class, 'update'])->name('actualizar');
-Route::delete('/api/almacen/delete', [App\Http\Controllers\AlmacenController::class, 'delete'])->name('borrar');*/
+Route::get('/api/almacen/update', [App\Http\Controllers\AlmacenController::class, 'update'])->name('actualizar');
+Route::delete('/api/almacen/delete', [App\Http\Controllers\AlmacenController::class, 'delete'])->name('borrar');
 
 Route::post('/api/material/load', [App\Http\Controllers\MaterialController::class, 'load'])->name('alimentar');
+Route::get('/api/material/update', [App\Http\Controllers\MaterialController::class, 'load'])->name('alimentar');
+Route::delete('/api/material/delete', [App\Http\Controllers\AlmacenController::class, 'delete'])->name('borrar');
 
 Auth::routes();
 
